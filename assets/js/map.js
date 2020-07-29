@@ -69,88 +69,15 @@ L.control.scale().addTo(map);
 
 
 //----------------------------------------------------------- MARKERS + CUSTOM ICONS
-// set variable with Latitute and Longitude, plus any options bindings
-let rioMarker = L.marker([-22.951993, -43.210439]).addTo(map).bindPopup("Christ the Redeemer").bindTooltip("Rio de Janeiro") /*.openPopup()*/ ;
-// set custom icon per marker
-let rioIcon = new L.Icon({
-    iconUrl: "https://raw.githubusercontent.com/TravelTimN/ci-ifd-lead/master/week4-leafletjs/example-project/img/rio.png", // image location
-    iconSize: [50, 50], // image size (width: 50px; height: 50px;)
-    iconAnchor: [25, 50] // sets location of marker respective to LatLng coordinates [X, Y]
-});
-rioMarker.setIcon(rioIcon); // append custom icon to marker
-
-let beijingMarker = L.marker([40.676698, 117.241585]).addTo(map).bindPopup("Great Wall of China").bindTooltip("Beijing") /*.openPopup()*/ ;
-let beijingIcon = new L.Icon({
-    iconUrl: "https://raw.githubusercontent.com/TravelTimN/ci-ifd-lead/master/week4-leafletjs/example-project/img/beijing.png",
-    iconSize: [50, 50],
-    iconAnchor: [25, 50]
-});
-beijingMarker.setIcon(beijingIcon);
-
-let cairoMarker = L.marker([29.979213, 31.134357]).addTo(map).bindPopup("Pyramids of Giza").bindTooltip("Cairo") /*.openPopup()*/ ;
-let cairoIcon = new L.Icon({
-    iconUrl: "https://raw.githubusercontent.com/TravelTimN/ci-ifd-lead/master/week4-leafletjs/example-project/img/cairo.png",
-    iconSize: [50, 50],
-    iconAnchor: [25, 50]
-});
-cairoMarker.setIcon(cairoIcon);
-
-let parisMarker = L.marker([48.858314, 2.294546]).addTo(map).bindPopup("Eiffel Tower").bindTooltip("Paris") /*.openPopup()*/ ;
-let parisIcon = new L.Icon({
-    iconUrl: "https://raw.githubusercontent.com/TravelTimN/ci-ifd-lead/master/week4-leafletjs/example-project/img/paris.png",
-    iconSize: [50, 50],
-    iconAnchor: [25, 50]
-});
-parisMarker.setIcon(parisIcon);
-
-let desertMarker = L.marker([36.990464, -110.095567]).addTo(map).bindPopup("Monument Valley").bindTooltip("Arizona") /*.openPopup()*/ ;
-let desertIcon = new L.Icon({
-    iconUrl: "https://raw.githubusercontent.com/TravelTimN/ci-ifd-lead/master/week4-leafletjs/example-project/img/desert.png",
-    iconSize: [50, 50],
-    iconAnchor: [25, 50]
-});
-desertMarker.setIcon(desertIcon);
-
-let easterMarker = L.marker([-27.125710, -109.276806]).addTo(map).bindPopup("Hanga Roa").bindTooltip("Easter Island") /*.openPopup()*/ ;
-let easterIcon = new L.Icon({
-    iconUrl: "https://raw.githubusercontent.com/TravelTimN/ci-ifd-lead/master/week4-leafletjs/example-project/img/easter.png",
-    iconSize: [50, 50],
-    iconAnchor: [25, 50]
-});
-easterMarker.setIcon(easterIcon);
-
-let sydneyMarker = L.marker([-33.856963, 151.215136]).addTo(map).bindPopup("Syndey Opera House").bindTooltip("Sydney") /*.openPopup()*/ ;
-let sydneyIcon = new L.Icon({
-    iconUrl: "https://raw.githubusercontent.com/TravelTimN/ci-ifd-lead/master/week4-leafletjs/example-project/img/sydney.png",
-    iconSize: [50, 50],
-    iconAnchor: [25, 50]
-});
-sydneyMarker.setIcon(sydneyIcon);
-
-let penguinMarker = L.marker([-69.512083, -65.713293]).addTo(map).bindPopup("Here be Penguins!").bindTooltip("Antarctica") /*.openPopup()*/ ;
-let penguinIcon = new L.Icon({
-    iconUrl: "https://raw.githubusercontent.com/TravelTimN/ci-ifd-lead/master/week4-leafletjs/example-project/img/penguin.png",
-    iconSize: [50, 50],
-    iconAnchor: [25, 50]
-});
-penguinMarker.setIcon(penguinIcon);
-
-let okavangoMarker = L.marker([-19.649958, 22.905784]).addTo(map).bindPopup("Okavango Delta").bindTooltip("Botswana") /*.openPopup()*/ ;
-let okavangoIcon = new L.Icon({
-    iconUrl: "https://raw.githubusercontent.com/TravelTimN/ci-ifd-lead/master/week4-leafletjs/example-project/img/okavango.png",
-    iconSize: [50, 50],
-    iconAnchor: [25, 50]
-});
-okavangoMarker.setIcon(okavangoIcon);
-
-let polarMarker = L.marker([78.235721, 15.491337]).addTo(map).bindPopup("Here be Polar Bears!").bindTooltip("Svalbard") /*.openPopup()*/ ;
-let polarIcon = new L.Icon({
-    iconUrl: "https://raw.githubusercontent.com/TravelTimN/ci-ifd-lead/master/week4-leafletjs/example-project/img/polar.png",
-    iconSize: [50, 50],
-    iconAnchor: [25, 50]
-});
-polarMarker.setIcon(polarIcon);
-
+// // set variable with Latitute and Longitude, plus any options bindings
+// let rioMarker = L.marker([-22.951993, -43.210439]).addTo(map).bindPopup("Christ the Redeemer").bindTooltip("Rio de Janeiro") /*.openPopup()*/ ;
+// // set custom icon per marker
+// let rioIcon = new L.Icon({
+//     iconUrl: "https://raw.githubusercontent.com/TravelTimN/ci-ifd-lead/master/week4-leafletjs/example-project/img/rio.png", // image location
+//     iconSize: [50, 50], // image size (width: 50px; height: 50px;)
+//     iconAnchor: [25, 50] // sets location of marker respective to LatLng coordinates [X, Y]
+// });
+// rioMarker.setIcon(rioIcon); // append custom icon to marker
 
 
 
@@ -173,28 +100,28 @@ let neBound = L.circle([80, 185], {
     radius: 200000
 }).addTo(map).bindPopup("Top-Right Bound");
 
-let myCircle = L.circle([53.349807, -6.260255], { // LatLng of circle (Dublin Spire)
-    color: "#000", // stroke color
-    opacity: 0.5, // opacity from 0-1
-    fillColor: "#0f0", // fill color
-    fillOpacity: 0.5, // fill opacity
-    radius: 50 // radius of circle
-}).addTo(map).bindPopup("Dublin Spire").bindTooltip("Dublin"); // append circle to "map" #div with pop-up
+// let myCircle = L.circle([53.349807, -6.260255], { // LatLng of circle (Dublin Spire)
+//     color: "#000", // stroke color
+//     opacity: 0.5, // opacity from 0-1
+//     fillColor: "#0f0", // fill color
+//     fillOpacity: 0.5, // fill opacity
+//     radius: 50 // radius of circle
+// }).addTo(map).bindPopup("Dublin Spire").bindTooltip("Dublin"); // append circle to "map" #div with pop-up
 
 
 
 
-//----------------------------------------------------------- POLYLINES
-// single, straigt lines from one coordinate to another
-let myPolyline = L.polyline([
-    [-22.951993, -43.210439], // starting coordinates of polyline (Rio)
-    [40.676698, 117.241585] // ending coordinates of polyline (Beijing)
-], {
-    color: "red", // color can be #HEX, name, RGB(A), etc.
-    weight: 5, // stroke or width of line
-    opacity: 1 // opacity of line
-}).addTo(map).bindPopup("<b>Christ the Redeemer<br>- to -<br>Great Wall of China</b>").bindTooltip("Rio to Beijing [POLYLINE]");
-// append polyline to "map" #div and include pop-up and hover text.
+// //----------------------------------------------------------- POLYLINES
+// // single, straight lines from one coordinate to another
+// let myPolyline = L.polyline([
+//     [-22.951993, -43.210439], // starting coordinates of polyline (Rio)
+//     [40.676698, 117.241585] // ending coordinates of polyline (Beijing)
+// ], {
+//     color: "red", // color can be #HEX, name, RGB(A), etc.
+//     weight: 5, // stroke or width of line
+//     opacity: 1 // opacity of line
+// }).addTo(map).bindPopup("<b>Christ the Redeemer<br>- to -<br>Great Wall of China</b>").bindTooltip("Rio to Beijing [POLYLINE]");
+// // append polyline to "map" #div and include pop-up and hover text.
 
 
 
@@ -203,37 +130,37 @@ let myPolyline = L.polyline([
 // custom shapes, not a single line, but an actual shape
 // the example below is a "rough" outline of the country *Kazakhstan*
 // (apologies to the Kazakh nation for creating new fake borders with neighbors!)
-let myPolygon = L.polygon([
-    [41.791686, 52.532313],
-    [44.613073, 50.300030],
-    [45.962637, 53.090383],
-    [47.042953, 52.462554],
-    [46.228697, 49.567562],
-    [49.276056, 46.533053],
-    [51.780782, 51.032498],
-    [51.216236, 59.717473],
-    [54.072007, 61.356805],
-    [55.321612, 70.425454],
-    [53.869636, 73.317153],
-    [54.304194, 76.736554],
-    [50.953315, 79.947535],
-    [50.986721, 83.119436],
-    [49.184949, 87.481489],
-    [47.220813, 85.740977],
-    [47.220813, 83.005456],
-    [45.330319, 82.264586],
-    [45.008892, 79.871005],
-    [42.283878, 80.191691],
-    [43.272062, 74.235027],
-    [40.716621, 68.437327],
-    [43.655295, 65.110162],
-    [43.564289, 61.955585],
-    [45.597759, 58.496693],
-    [45.046214, 56.011634],
-    [41.321885, 55.497063],
-    [42.403493, 54.075143]
-]).addTo(map).bindPopup("Kazakhstan").bindTooltip("Kazakhstan [POLYGON]");
-// append the polygon with optional pop-up and hover text
+// let myPolygon = L.polygon([
+//     [41.791686, 52.532313],
+//     [44.613073, 50.300030],
+//     [45.962637, 53.090383],
+//     [47.042953, 52.462554],
+//     [46.228697, 49.567562],
+//     [49.276056, 46.533053],
+//     [51.780782, 51.032498],
+//     [51.216236, 59.717473],
+//     [54.072007, 61.356805],
+//     [55.321612, 70.425454],
+//     [53.869636, 73.317153],
+//     [54.304194, 76.736554],
+//     [50.953315, 79.947535],
+//     [50.986721, 83.119436],
+//     [49.184949, 87.481489],
+//     [47.220813, 85.740977],
+//     [47.220813, 83.005456],
+//     [45.330319, 82.264586],
+//     [45.008892, 79.871005],
+//     [42.283878, 80.191691],
+//     [43.272062, 74.235027],
+//     [40.716621, 68.437327],
+//     [43.655295, 65.110162],
+//     [43.564289, 61.955585],
+//     [45.597759, 58.496693],
+//     [45.046214, 56.011634],
+//     [41.321885, 55.497063],
+//     [42.403493, 54.075143]
+// ]).addTo(map).bindPopup("Kazakhstan").bindTooltip("Kazakhstan [POLYGON]");
+// // append the polygon with optional pop-up and hover text
 
 
 
