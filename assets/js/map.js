@@ -10,9 +10,9 @@ let mapTileLayers = L.tileLayer("http://services.arcgisonline.com/arcgis/rest/se
 //----- INITIAL MAP SETTINGS (most of these are optional!)
 let map = L.map("map", { // "map" is the #div where to build the map in html
     layers: [mapTileLayers], // variable from above
-    center: [23.5, 12], // central lat-lng once loaded
-    zoom: 2, // smaller numbers = zoomOut // larger numbers = zoomIn
-    minZoom: 2, // max zoomOut permitted
+    center: [53.343253, -6.286565], // central lat-lng once loaded
+    zoom: 9, // smaller numbers = zoomOut // larger numbers = zoomIn
+    minZoom: 1, // max zoomOut permitted
     maxZoom: 18, // max zoomIn permitted
     maxBounds: [ // stops map from infinite scrolling at edges
         [-75, -190],
