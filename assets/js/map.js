@@ -10,7 +10,7 @@ let mapTileLayers = L.tileLayer(
   }
 );
 
-//----- INITIAL MAP SETTINGS (most of these are optional!)
+//------- INITIAL MAP SETTINGS (most of these are optional!) -------
 
 let map = L.map("map", {
   // "map" is the #div where to build the map in html
@@ -71,11 +71,12 @@ searchControl.on("results", function (data) {
   }
 });
 
-//----------------------------------------------------------- SCALE
+//------- SCALE -------
+
 // adds scale/legend in bottom-left corner of map
 L.control.scale().addTo(map);
 
-//-------- MARKERS + CUSTOM ICONS
+//------- MARKERS + CUSTOM ICONS -------
 
 // // set variable with Latitute and Longitude, plus any options bindings
 
@@ -92,7 +93,8 @@ let dublinMarker = L.marker([53.34201, -6.286703])
 // });
 // rioMarker.setIcon(rioIcon); // append custom icon to marker
 
-//----------------------------------------------------------- CIRCLES
+//------- CIRCLES -------
+
 // creates circles on the map
 // the following are for display purposes to show the "maxBounds" locations on this particular map
 let swBound = L.circle([-75, -190], {
@@ -136,7 +138,8 @@ let neBound = L.circle([80, 185], {
 // }).addTo(map).bindPopup("<b>Christ the Redeemer<br>- to -<br>Great Wall of China</b>").bindTooltip("Rio to Beijing [POLYLINE]");
 // // append polyline to "map" #div and include pop-up and hover text.
 
-//----------------------------------------------------------- POLYGONS
+//------- POLYGONS -------
+
 // custom shapes, not a single line, but an actual shape
 // the example below is a "rough" outline of the country *Kazakhstan*
 // (apologies to the Kazakh nation for creating new fake borders with neighbors!)
@@ -172,7 +175,8 @@ let neBound = L.circle([80, 185], {
 // ]).addTo(map).bindPopup("Kazakhstan").bindTooltip("Kazakhstan [POLYGON]");
 // // append the polygon with optional pop-up and hover text
 
-//----------------------------------------------------------- POPUP ON CLICK
+//------- POPUP ON CLICK -------
+
 // this function will show a pop-up with the exact LatLng coordinates where the user clicks
 let popupClick = L.popup();
 
